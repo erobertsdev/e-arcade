@@ -28,13 +28,12 @@ body {
 }
 
 .title {
-	width: 100vw;
 	text-align: center;
 	margin: 20px 20px;
 }
 
 .main-title {
-	font-size: 15rem;
+	font-size: 17rem;
 	-webkit-text-fill-color: greenyellow;
 	-webkit-text-stroke-width: 1px;
 	-webkit-text-stroke-color: black;
@@ -43,12 +42,12 @@ body {
 }
 
 .title-e {
-	font-size: 15rem;
+	font-size: 17rem;
 	-webkit-text-fill-color: rgb(0, 174, 255);
 }
 
 .title-r {
-	font-size: 15rem;
+	font-size: 17rem;
 	-webkit-text-fill-color: rgb(255, 0, 0);
 }
 
@@ -61,6 +60,7 @@ body {
 	padding-top: 50px;
 	display: grid;
 	grid-template-columns: 400px 400px;
+	grid-auto-rows: minmax(400px, auto);
 	grid-gap: 40px;
 	justify-content: center;
 	align-items: center;
@@ -69,6 +69,7 @@ body {
 .game-1 {
 	height: 300px;
 	width: 300px;
+	margin: 0 auto;
 	backdrop-filter: grayscale(.5);
 	background-image: url(../img/connect-four.png);
 	background-size: cover;
@@ -78,6 +79,7 @@ body {
 .game-2 {
 	height: 300px;
 	width: 300px;
+	margin: 0 auto;
 	background-image: url(../img/simone.png);
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -160,5 +162,23 @@ https://codepen.io/fallwestmike/pen/ezOGJK
 	}
 	100% {
 		filter: brightness(100%);
+	}
+}
+
+@media all and (max-width: 900px) {
+	.games {
+		grid-template-columns: 400px;
+		grid-gap: 20px;
+	}
+}
+
+@media all and (max-width: 600px) {
+	.main-title,
+	.title-e,
+	.title-r {
+		font-size: 10rem;
+	}
+	.sub-title {
+		font-size: 3rem;
 	}
 }
