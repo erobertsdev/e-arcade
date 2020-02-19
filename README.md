@@ -1,3 +1,3 @@
 # E.aRcade
 
-A place for any game projects I build.
+A page to consolidate any game projects I have.
